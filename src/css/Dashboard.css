@@ -1,0 +1,179 @@
+/* GENEL */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f8fafc;
+}
+
+/* LAYOUT */
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+/* SOL PANEL */
+.left-panel {
+  width: 260px;
+  background: #f4c54277;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.small-title {
+  font-size: 12px;
+  color: #94a3b8;
+  margin-top: 10px;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #1e293b;
+  padding: 8px 10px;
+  border-radius: 8px;
+}
+
+.search-box input {
+  border: none;
+  background: transparent;
+  outline: none;
+  color: white;
+  width: 100%;
+}
+
+.filter-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.filter-item:hover {
+  background: #1e293b;
+}
+
+/* ORTA PANEL */
+.center-panel {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.case-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: white;
+  padding: 14px;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  transition: 0.2s;
+  border: 1px solid #e2e8f0;
+}
+
+.case-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.case-card.selected {
+  border: 2px solid #3b82f6;
+}
+
+.icon-box {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-body {
+  flex: 1;
+}
+
+.time {
+  font-size: 12px;
+  color: #94a3b8;
+}
+
+.type-id {
+  font-size: 11px;
+  color: #64748b;
+  margin-top: 4px;
+}
+
+.desc {
+  font-size: 13px;
+  color: #475569;
+}
+
+/* SAĞ PANEL */
+.right-panel {
+  width: 320px;
+  background: white;
+  border-left: 1px solid #e2e8f0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.empty-msg {
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+/* RISK BADGE */
+.risk-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+/* INFO BLOCK */
+.info-block {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.label {
+  font-size: 11px;
+  color: #94a3b8;
+}
+
+.note-box {
+  background: #f1f5f9;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 13px;
+}
+
+/* BUTTON */
+.action-btn {
+  margin-top: auto;
+  background: #3b82f6;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.action-btn:hover {
+  background: #2563eb;
+}
