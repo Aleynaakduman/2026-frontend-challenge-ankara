@@ -133,50 +133,56 @@ export default function Dashboard() {
       </main>
 
       {/* SAĞ PANEL*/}
-      <aside className="right-panel">
-        {!selected ? (
-          <div className="empty-msg">Analiz için bir kayıt seçin</div>
-        ) : (
-          <>
-            <div style={{ display: "flex", gap: "12px", alignItems: "center" }}>
-              <div style={{ background: "#f1f5f9", padding: "10px", borderRadius: "8px" }}>
-                <User size={24} />
-              </div>
-              <div>
-                <strong style={{ fontSize: "18px" }}>Detay Analizi</strong>
-                <div className="type-id">VAKA: {selected.id}</div>
-              </div>
-            </div>
 
-            <div className="risk-badge" style={{ backgroundColor: riskStyles[selected.risk].bg, color: riskStyles[selected.risk].color }}>
-              <AlertTriangle size={18} />
-              {selected.risk} Risk Seviyesi
-            </div>
+<aside className={`right-panel ${selected ? "active" : ""}`}>
+  {!selected ? (
+    <div className="empty-msg">Analiz için bir kayıt seçin</div>
+  ) : (
+    <>
+      
+      <button className="close-btn" onClick={() => setSelected(null)}>
+        ✕ Kapat
+      </button>
 
-            <div className="info-block">
-              <span className="label">KATEGORİ</span>
-              <div style={{ fontWeight: 600, fontSize: "14px", color: "#334155" }}>
-                {categoryConfig[selected.typeId].label}
-              </div>
-            </div>
+      <div className="detail-header" style={{ display: "flex", gap: "12px", alignItems: "center", marginBottom: "20px" }}>
+        <div style={{ background: "#f1f5f9", padding: "10px", borderRadius: "8px" }}>
+          <User size={24} />
+        </div>
+        <div>
+          <strong style={{ fontSize: "18px" }}>Detay Analizi</strong>
+          <div className="type-id">VAKA: {selected.id}</div>
+        </div>
+      </div>
 
-            <div className="info-block">
-              <span className="label">KONUM</span>
-              <div style={{ display: "flex", alignItems: "center", gap: "6px", fontWeight: 600 }}>
-                <MapPin size={16} color="#ef4444" />
-                {selected.location}
-              </div>
-            </div>
+      <div className="risk-badge" style={{ backgroundColor: riskStyles[selected.risk].bg, color: riskStyles[selected.risk].color }}>
+        <AlertTriangle size={18} />
+        {selected.risk} Risk Seviyesi
+      </div>
 
-            <div className="info-block">
-              <span className="label">İÇERİK</span>
-              <p className="note-box">{selected.desc}</p>
-            </div>
+      <div className="info-block">
+        <span className="label">KATEGORİ</span>
+        <div style={{ fontWeight: 600, fontSize: "14px", color: "#334155" }}>
+          {categoryConfig[selected.typeId].label}
+        </div>
+      </div>
 
-           
-          </>
-        )}
-      </aside>
+      <div className="info-block">
+        <span className="label">KONUM</span>
+        <div style={{ display: "flex", alignItems: "center", gap: "6px", fontWeight: 600 }}>
+          <MapPin size={16} color="#ef4444" />
+          {selected.location}
+        </div>
+      </div>
+
+      <div className="info-block">
+        <span className="label">İÇERİK</span>
+        <p className="note-box">{selected.desc}</p>
+      </div>
+    </>
+  )}
+</aside>
+       
+      
     </div>
   );
 }
