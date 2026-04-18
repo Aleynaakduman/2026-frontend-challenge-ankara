@@ -9,7 +9,8 @@ import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
 import Container from '@mui/material/Container';
 
-import { FaUserSecret, FaCat } from "react-icons/fa";
+import { FaUserSecret, FaPaw } from "react-icons/fa";
+
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -79,7 +80,8 @@ export default function SearchAppBar() {
               >
                 DETECTIVE
               </Typography>
-              <FaCat />
+             
+              <FaPaw />
             </Box>
 
             <Box sx={{ flexGrow: 1 }} />
