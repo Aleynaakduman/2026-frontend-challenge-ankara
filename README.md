@@ -3,13 +3,13 @@
 ## User Information
 Please fill in your information after forking this repository:
 
-- **Name**: [Your Name]
+- **Name**: Aleyna Akduman
 
 ## Project Description
-[Add a brief description of your project here]
+Bu proje, Jotform Frontend Challenge için geliştirilmiş modern bir frontend dashboard uygulamasıdır. React ile geliştirilmiş olup UI tasarımında Material UI (MUI) ve ikonlar için React Icons kullanılmıştır. API üzerinden alınan form verileri listelenir.
 
 ## Getting Started
-[Add instructions for setting up and running the project]
+Proje klasörüne girin cd frontend ardından npm install çalıştırın ve npm run dev ile projeyi başlatın.
 
 # 🚀 Challenge Duyurusu
 
